@@ -6,7 +6,7 @@ This application is designed to manage a small movie theater. It allows users to
 ## Installation
 To run this application, you will need Java 21 LTS and IntelliJ IDEA 2024.2.
 
-1. Clone the repository: git clone https://yourrepositorylink.com
+1. Clone the repository: git clone (https://github.com/DenisaaMinu/JavaEndAssignment)
 2. Open the project in IntelliJ IDEA.
 3. Ensure Java 21 LTS is set as the SDK.
 4. Build the project to resolve Maven dependencies.
