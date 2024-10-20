@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="328.0" prefWidth="550.0" style="-fx-background-color: F5F5F5;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.inholland.nl.denisaminu720645endassignment.EditShowingController">
+    <children>
+        <GridPane layoutX="15.0" layoutY="212.0" prefHeight="80.0" prefWidth="522.0" style="-fx-background-color: white;">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="247.99999999999997" minWidth="10.0" prefWidth="195.99999999999997" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="318.0" minWidth="10.0" prefWidth="316.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="54.00001525878906" minHeight="10.0" prefHeight="20.8" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="91.40001525878907" minHeight="10.0" prefHeight="31.6" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="91.40001525878907" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <DatePicker fx:id="endDatePicker" prefWidth="175.0" promptText="Date (DD-MM-YYYY)" GridPane.rowIndex="1" />
+                <Label text="End date/time:" />
+                <TextField fx:id="endTimeField" promptText="Time (HH:MM)" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets right="214.0" />
+                    </GridPane.margin>
+                </TextField>
+                <Label fx:id="errorEndDateLabel" textFill="#ff0808" GridPane.rowIndex="2" />
+                <Label fx:id="errorEndTimeLabel" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets left="1.0" />
+                    </GridPane.margin>
+                </Label>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" top="7.0" />
+            </padding>
+        </GridPane>
+        <HBox layoutY="0.0" prefHeight="53.0" prefWidth="550.0" style="-fx-background-color: black;">
+            <children>
+                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="53.0" prefWidth="196.0" text="Fantastic Cinema" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets top="10.0" />
+                    </HBox.margin>
+                </Label>
+                <HBox alignment="CENTER" prefHeight="54.0" prefWidth="354.0">
+                    <children>
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="88.0" text="Sell tickets">
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="10.0" right="2.0" top="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="manageShowingsButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="114.0" text="Manage showings">
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="2.0" right="2.0" top="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="111.0" text="View sales history">
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="2.0" right="10.0" top="10.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                    <HBox.margin>
+                        <Insets bottom="-18.0" />
+                    </HBox.margin>
+                </HBox>
+            </children>
+        </HBox>
+        <GridPane alignment="CENTER_RIGHT" layoutX="15.0" layoutY="100.0" prefHeight="71.0" prefWidth="522.0" style="-fx-background-color: white;">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.99999999999997" minWidth="10.0" prefWidth="196.99999999999997" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.0" minWidth="10.0" prefWidth="315.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="41.4" minHeight="10.0" prefHeight="18.799999999999997" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="39.800000000000004" minHeight="3.799999999999997" prefHeight="39.800000000000004" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="59.00000000000001" minHeight="10.0" prefHeight="22.60000000000001" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <TextField fx:id="titleField" prefHeight="26.0" prefWidth="226.0" promptText="Title" />
+                <Label contentDisplay="CENTER" text="Start date/time:" GridPane.rowIndex="2" />
+                <Label fx:id="errorTitleLabel" textFill="RED" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets left="3.0" />
+                    </GridPane.margin>
+                </Label>
+            </children>
+            <padding>
+                <Insets bottom="3.0" left="10.0" top="10.0" />
+            </padding>
+        </GridPane>
+        <Label layoutX="19.0" layoutY="71.0" text="Edit showing" textFill="#696666">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <HBox layoutX="14.0" layoutY="304.0" prefHeight="43.0" prefWidth="190.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#onSaveShowingButton" prefHeight="26.0" prefWidth="95.0" style="-fx-background-color: blue;" text="Save showing" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets right="11.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#onCancelShowingButton" style="-fx-background-color: #333333;" text="Cancel" textFill="WHITE" />
+            </children>
+        </HBox>
+        <HBox layoutX="15.0" layoutY="169.0" prefHeight="37.0" prefWidth="522.0" style="-fx-background-color: white;">
+            <children>
+                <DatePicker fx:id="startDatePicker" promptText="Date (DD-MM-YYYY)">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin></DatePicker>
+                <TextField fx:id="startTimeField" prefHeight="26.0" prefWidth="107.0" promptText="Time (HH:MM)">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <HBox.margin>
+                        <Insets left="19.0" />
+                    </HBox.margin>
+                </TextField>
+            </children>
+        </HBox>
+        <GridPane layoutX="15.0" layoutY="195.0" prefHeight="26.0" prefWidth="522.0" style="-fx-background-color: white;">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="167.8" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="345.0" minWidth="10.0" prefWidth="345.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="errorStartDateLabel" textFill="RED">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin></Label>
+                <Label fx:id="errorStartTimeLabel" prefHeight="18.0" prefWidth="162.0" textFill="RED" GridPane.columnIndex="1">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <padding>
+                        <Insets left="27.0" />
+                    </padding>
+                </Label>
+            </children>
+            <padding>
+                <Insets left="10.0" />
+            </padding>
+        </GridPane>
+      <Label fx:id="errorLabel" layoutX="204.0" layoutY="304.0" />
+    </children>
+</AnchorPane>

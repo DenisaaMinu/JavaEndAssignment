@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="451.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.inholland.nl.denisaminu720645endassignment.SellTicketsController">
+    <children>
+        <HBox layoutY="-1.0" prefHeight="54.0" prefWidth="611.0" style="-fx-background-color: black;">
+            <children>
+                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="115.0" prefWidth="196.0" text="Fantastic Cinema" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets top="24.0" />
+                    </HBox.margin>
+                </Label>
+                <HBox alignment="BOTTOM_RIGHT" prefHeight="54.0" prefWidth="406.0">
+                    <children>
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="88.0" text="Sell tickets">
+                            <HBox.margin>
+                                <Insets bottom="2.0" />
+                            </HBox.margin></Button>
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="114.0" text="Manage showings">
+                            <HBox.margin>
+                                <Insets bottom="2.0" left="2.0" right="2.0" />
+                            </HBox.margin></Button>
+                        <Button mnemonicParsing="false" text="View sales history">
+                            <HBox.margin>
+                                <Insets bottom="2.0" />
+                            </HBox.margin></Button>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+        <HBox layoutX="19.0" layoutY="68.0" prefHeight="30.0" prefWidth="200.0">
+         <children>
+                <Label text="Sell tickets">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+         </children></HBox>
+          <Label fx:id="selectedSeatLabel" layoutX="19.0" layoutY="92.0" prefHeight="18.0" prefWidth="254.0" />
+      <Pane layoutX="17.0" layoutY="112.0" prefHeight="319.0" prefWidth="579.0" style="-fx-background-color: white;">
+         <children>
+              <GridPane fx:id="ticketsGrid" layoutX="51.0" layoutY="41.0" prefHeight="188.0" prefWidth="392.0">
+                  <columnConstraints>
+                      <ColumnConstraints hgrow="never" maxWidth="205.6" minWidth="10.0" prefWidth="155.6" />
+                      <ColumnConstraints hgrow="never" maxWidth="158.00000000000003" minWidth="0.0" prefWidth="158.00000000000003" />
+                  <ColumnConstraints hgrow="never" maxWidth="158.00000000000003" minWidth="10.0" prefWidth="158.00000000000003" />
+                  <ColumnConstraints hgrow="never" maxWidth="158.00000000000003" minWidth="10.0" prefWidth="158.00000000000003" />
+                  <ColumnConstraints hgrow="never" maxWidth="158.00000000000003" minWidth="10.0" prefWidth="158.00000000000003" />
+                  <ColumnConstraints hgrow="never" maxWidth="158.00000000000003" minWidth="10.0" prefWidth="158.00000000000003" />
+                  <ColumnConstraints hgrow="never" maxWidth="158.00000000000003" minWidth="10.0" prefWidth="158.00000000000003" />
+                  <ColumnConstraints hgrow="never" maxWidth="158.00000000000003" minWidth="10.0" prefWidth="158.00000000000003" />
+                  <ColumnConstraints hgrow="never" maxWidth="158.00000000000003" minWidth="10.0" prefWidth="158.00000000000003" />
+                  <ColumnConstraints hgrow="never" maxWidth="158.00000000000003" minWidth="10.0" prefWidth="158.00000000000003" />
+                  <ColumnConstraints hgrow="never" maxWidth="158.00000000000003" minWidth="10.0" prefWidth="158.00000000000003" />
+                  <ColumnConstraints hgrow="never" maxWidth="158.00000000000003" minWidth="10.0" prefWidth="158.00000000000003" />
+                  </columnConstraints>
+                  <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="never" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="never" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="never" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="never" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="never" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="never" />
+                  </rowConstraints>
+              </GridPane>
+            <ListView fx:id="selectedSeatsList" layoutX="451.0" layoutY="44.0" prefHeight="188.0" prefWidth="114.0" />
+                <Button fx:id="sellTicketButton" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="57.0" layoutY="288.0" mnemonicParsing="false" onAction="#onSellTicketButton" prefHeight="26.0" prefWidth="123.0" style="-fx-background-color: #0000FF;" textFill="WHITE" />
+            <Label layoutX="11.0" layoutY="48.0" text="Row 1" />
+            <Label layoutX="11.0" layoutY="78.0" text="Row 2" />
+            <Label layoutX="11.0" layoutY="108.0" text="Row 3" />
+            <Label layoutX="11.0" layoutY="140.0" text="Row 4" />
+            <Label layoutX="11.0" layoutY="174.0" text="Row 5" />
+            <Label layoutX="11.0" layoutY="201.0" text="Row 6" />
+            <Label layoutX="226.0" text="----Viewscreen----" />
+            <TextField fx:id="customerNameTextField" layoutX="56.0" layoutY="252.0" prefHeight="25.0" prefWidth="392.0" promptText="Customer name" />
+            <Button layoutX="188.0" layoutY="288.0" mnemonicParsing="false" onAction="#onCancelButton" prefHeight="26.0" prefWidth="110.0" text="Cancel" />
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
